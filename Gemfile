@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.7.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -31,9 +31,11 @@ gem 'http_accept_language'
 gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem "responders"
 end
