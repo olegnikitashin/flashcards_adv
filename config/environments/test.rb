@@ -13,8 +13,15 @@ Rails.application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
-  config.static_cache_control = 'public, max-age=3600'
+  # config.serve_static_assets  = true
+
+  # will be deprecated in Rails 5.1
+  # config.serve_static_files = true
+  config.public_file_server.enabled = true
+
+  # will be deprecated in Rails 5.1
+  # config.static_cache_control = 'public, max-age=3600'
+  config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=3600' }
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
