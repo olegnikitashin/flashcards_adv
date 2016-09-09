@@ -25,6 +25,6 @@ module Flashcards
     config.i18n.available_locales = [:ru, :en]
 
     # Deprication warning
-    config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
   end
 end
