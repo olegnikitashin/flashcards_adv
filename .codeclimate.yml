@@ -27,4 +27,4 @@ ratings:
   - "**.go"
 exclude_paths:
 - spec/**/*
-- assets/stylesheets/bootstrap.css
+- assets/stylesheets/*
