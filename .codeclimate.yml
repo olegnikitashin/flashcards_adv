@@ -27,4 +27,4 @@ ratings:
   - "**.go"
 exclude_paths:
 - spec/**/*
-- assets/stylesheets/*
+- app/assets/stylesheets/*
