@@ -32,6 +32,10 @@ class User < ApplicationRecord
     update_attribute(:current_block_id, nil)
   end
 
+  def is_admin?
+    self.admin
+  end
+
   private
 
   def set_default_locale
