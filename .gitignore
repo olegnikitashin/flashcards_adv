@@ -16,5 +16,6 @@
 /tmp
 .idea/*
 config/database.yml
-config/application.yml
+config/database.sample.yml
 public/uploads/
+.vagrant/
