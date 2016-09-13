@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   filter :locale
 
   root 'main#index'
@@ -37,5 +36,5 @@ Rails.application.routes.draw do
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  delete 'sign_out', :to => 'dashboard/user_sessions#destroy', as: 'logout'
+  delete 'sign_out', to: 'dashboard/user_sessions#destroy', as: 'logout'
 end

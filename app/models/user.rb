@@ -32,7 +32,7 @@ class User < ApplicationRecord
     update_attribute(:current_block_id, nil)
   end
 
-  def is_admin?
+  def admin?
     self.admin
   end
 

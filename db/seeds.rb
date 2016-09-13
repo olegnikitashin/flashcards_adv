@@ -24,7 +24,7 @@
 admin = User.new(email: 'admin@example.com', password: 'foobar', password_confirmation: 'foobar', admin: true, locale: 'en')
 
 if admin.valid?
-  admin.save()
+  admin.save
 
 elsif admin.errors.any?
   admin.errors.full_messages.each do |msg|
