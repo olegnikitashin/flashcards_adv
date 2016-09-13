@@ -18,3 +18,18 @@
 #   translated = row.search('td[1]/p')[0].content.downcase
 #   Card.create(original_text: original, translated_text: translated, user_id: 17)
 # end
+
+# admin = User.create(email: 'admin@example.com', password: 'foobar', password_confirmation: 'foobar', admin: true, locale: 'en')
+
+admin = User.new(email: 'admin@example.com', password: 'foobar', password_confirmation: 'foobar', admin: true, locale: 'en')
+
+if admin.valid?
+  admin.save()
+
+elsif admin.errors.any?
+  admin.errors.full_messages.each do |msg|
+    puts msg
+  end
+else
+  puts "****NOT VALID****"
+end
