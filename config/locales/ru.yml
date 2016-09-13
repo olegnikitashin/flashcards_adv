@@ -37,6 +37,10 @@ ru:
   log_out_failed_provider_alert: "Вход из аккаунта %{provider.titleize} не выполнен ."
   please_log_in: 'Пожалуйста авторизуйтесь.'
 
+  admin:
+    actions:
+      dashboard:
+        title: 'Администрация сайта'
   activerecord:
     errors:
       messages:

@@ -52,4 +52,13 @@ FactoryGirl.define do
       end
     end
   end
+
+  factory :admin, class: User do
+    email 'admin@test.com'
+    password '12345'
+    password_confirmation '12345'
+    locale 'ru'
+    current_block_id ''
+    admin true
+  end
 end
