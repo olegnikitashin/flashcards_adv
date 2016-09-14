@@ -11,7 +11,7 @@ describe 'administration panel' do
     end
 
     it 'will allow admin to access admin panel' do
-      visit "/admin"
+      visit rails_admin_path
       expect(page).to have_content 'Администрация сайта'
     end
   end
@@ -24,7 +24,7 @@ describe 'administration panel' do
     end
 
     it 'will not alow simple user to access admin panel' do
-      visit "/admin"
+      visit rails_admin_path
       expect(page).to have_content 'Добро пожаловать'
     end
   end
