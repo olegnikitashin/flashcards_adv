@@ -25,7 +25,7 @@
               <%= link_to t(:delete_user_label), user_path(current_user),
                           method: :delete, class: 'navbar-link',
                           data: { confirm: 'Удалить пользователя?' } %> |
-              <%= link_to t(:log_out_label), :logout, method: :post,
+              <%= link_to t(:log_out_label), :logout_user, method: :post,
                           class: 'navbar-link' %>
             <% else %>
               <%= link_to t(:sing_up_label), new_user_path,

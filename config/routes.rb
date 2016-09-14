@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   scope module: 'dashboard' do
     resources :user_sessions, only: :destroy
     resources :users, only: :destroy
-    post 'logout' => 'user_sessions#destroy', :as => :logout
+
+    post 'logout' => 'user_sessions#destroy', :as => :logout_user
 
     resources :cards
 
@@ -33,4 +34,7 @@ Rails.application.routes.draw do
     get 'profile/:id/edit' => 'profile#edit', as: :edit_profile
     put 'profile/:id' => 'profile#update', as: :profile
   end
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  delete 'sign_out', to: 'dashboard/user_sessions#destroy', as: 'logout'
 end
