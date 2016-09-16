@@ -44,6 +44,13 @@ class Card < ApplicationRecord
     end
   end
 
+  # def flickr(tag)
+  #   photos = Flickr.photos.search(tags: tag, per_page: 10)
+  #   photos.collect do |photo|
+  #     URI.join "https://farm#{photo.farm}.staticflickr.com/", "#{photo.server}/", "#{photo.id}_#{photo.secret}.jpg/"
+  #   end
+  # end
+
   protected
 
   def set_review_date_as_now

@@ -34,9 +34,11 @@ gem 'newrelic_rpm'
 gem 'puma'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+gem "flickr-objects"
 
 group :development do
   gem 'web-console', '~> 2.0'
+  gem 'byebug'
 end
 
 group :development, :test do

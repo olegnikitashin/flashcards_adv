@@ -15,7 +15,7 @@
  *= require_self
  */
 
-@import 'bootstrap';
+
 
 #header {
   margin-top: 10px;
@@ -36,3 +36,8 @@
 .block_user_current_block_id {
   margin-left: 20px;
 }
+
+.hidden-field {
+  visibility: hidden;
+}
+@import 'bootstrap';
