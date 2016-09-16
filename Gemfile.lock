@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/mshibuya/remotipart.git
-  revision: 88d9a7d55bde66acb6cf3a3c6036a5a1fc991d5e
+  revision: 7e244e78e148430b7720e6cf8f86263d6a1dfddf
   specs:
-    remotipart (1.2.1)
+    remotipart (1.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -45,7 +45,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    arel (7.1.1)
+    arel (7.1.2)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -217,7 +217,7 @@ GEM
       json (~> 1.4)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
-    rollbar (2.12.0)
+    rollbar (2.13.0)
       multi_json
     routing-filter (0.6.0)
       actionpack (>= 4.2, < 5.1)
@@ -268,6 +268,9 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    turbolinks (5.0.1)
+      turbolinks-source (~> 5)
+    turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.2)
@@ -299,7 +302,7 @@ DEPENDENCIES
   flickr-objects
   fog-aws
   http_accept_language
-  jbuilder (~> 2.0)
+  jbuilder (~> 2.5)
   jquery-rails
   levenshtein
   mini_magick
@@ -321,6 +324,7 @@ DEPENDENCIES
   seedbank
   simple_form
   sorcery
+  turbolinks (~> 5)
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   whenever

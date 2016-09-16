@@ -7,7 +7,6 @@
       = hidden_field_tag :authenticity_token, form_authenticity_token
       = f.button :submit, 'Search', class: 'btn btn-default', id: 'flickr-search'
     #photos
-      sdas
       - if @urls
         - @urls.each do |url|
           = image_tag(url)
