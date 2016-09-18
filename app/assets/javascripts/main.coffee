@@ -40,3 +40,14 @@
 # $(document).ready ->
 #   $('button#flickr').click ->
 #     $('#flickr-field').removeClass('hidden-field')
+
+
+# $ ->
+#   $('#flickr-search').click (e) ->
+#     e.preventDefault()
+
+
+
+# $ ->
+#   $('form[id=new_link]').submit (e) ->
+#     e.preventDefault()
