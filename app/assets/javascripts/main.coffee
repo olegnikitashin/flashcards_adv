@@ -37,6 +37,6 @@
 #       $("#tag").val(picture)
 
 
-$(document).ready ->
-  $('button#flickr').click ->
-    $('#flickr-field').removeClass('hidden-field')
+# $(document).ready ->
+#   $('button#flickr').click ->
+#     $('#flickr-field').removeClass('hidden-field')

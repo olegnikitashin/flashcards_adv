@@ -1,8 +1,5 @@
 %br
-%button#flickr.btn.btn-default Загрузить из Flickr:
-%br
-%br
-#flickr-field.hidden-field
+#flickr-field
   Найти во Flickr:
   %form#new_link.form-group
     = form_tag find_flickr_path, method: :put, remote: true do
