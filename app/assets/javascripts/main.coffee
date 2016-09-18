@@ -31,7 +31,12 @@
 #               $("#form").val("")
 #           else
 #               alert "Enter something..."
+# $(document).ready ->
+#   $('button#flickr').click ->
+#       picture = $("#original_text").val()
+#       $("#tag").val(picture)
+
+
 $(document).ready ->
   $('button#flickr').click ->
-      picture = $("#original_text").val()
-      $("#tag").val(picture)
+    $('#flickr-field').removeClass('hidden-field')
