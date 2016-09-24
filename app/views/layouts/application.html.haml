@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Флэшкарточкер
+    -# %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"}
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #wrapper.container
+      = render 'shared/header'
+      #middle.row
+        #notice_block
+          = render 'shared/alert_notice'
+        .col-sm-12
+          = yield

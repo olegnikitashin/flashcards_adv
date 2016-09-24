@@ -11,7 +11,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2.1'
 
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rake'
@@ -34,9 +35,11 @@ gem 'newrelic_rpm'
 gem 'puma'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+gem "flickr-objects"
 
 group :development do
   gem 'web-console', '~> 2.0'
+  gem 'byebug'
 end
 
 group :development, :test do
@@ -44,4 +47,5 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem "responders"
+  gem 'webmock'
 end

@@ -15,7 +15,7 @@
  *= require_self
  */
 
-@import 'bootstrap';
+
 
 #header {
   margin-top: 10px;
@@ -36,3 +36,33 @@
 .block_user_current_block_id {
   margin-left: 20px;
 }
+
+.hidden-field {
+  visibility: hidden;
+}
+
+#flickr-field {
+  background: #e7e7e7;
+  max-width: 250px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 0.5em 0.5em;
+}
+
+#photos {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    padding: 15px;
+  }
+  img {
+    max-width: 250px;
+  }
+}
+.selected {
+  background-color: #e7e7e7;
+  border-radius: 3px;
+}
+@import 'bootstrap';

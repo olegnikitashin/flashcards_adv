@@ -1,0 +1,7 @@
+%h2 Редактировать карточку
+#form_partial
+  = render 'form', card: @card
+#flickr_partial
+  = render 'flickr', card: @card
+#flickr_photos
+  = render 'photos'

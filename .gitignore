@@ -17,5 +17,10 @@
 .idea/*
 config/database.yml
 config/database.sample.yml
+config/secrets.yml
 public/uploads/
 .vagrant/
+
+# Ignore application configuration
+/config/application.yml
+.byebug_history
