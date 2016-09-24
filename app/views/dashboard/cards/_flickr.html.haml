@@ -1,11 +1,7 @@
 %br
 #flickr-field
-  Найти во Flickr:
+  Загрузить фото из Flickr:
   #new_link.form-group
     = form_tag find_flickr_path, method: :put, remote: true do
       = text_field_tag :tag
-      = submit_tag 'Search', class: 'btn btn-default', id: 'flickr-search'
-  #photos
-    - if @urls
-      - @urls.each do |url|
-        = image_tag(url)
+      = submit_tag 'Поиск', class: 'btn btn-default', id: 'flickr-search'

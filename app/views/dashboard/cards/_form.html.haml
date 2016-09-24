@@ -9,7 +9,7 @@
   #image-block.form-group
     = f.input :image, as: :file, label: 'Изображение'
     = f.input :image_cache, as: :hidden
-    = f.input :remote_image_url, as: :hidden, input_html: { id: 'image_url' }
+    = f.input :remote_image_url, as: :hidden, input_html: { id: 'card_remote_image_url' }
     = hidden_field_tag :authenticity_token, form_authenticity_token
 
   .form-group

@@ -47,4 +47,5 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem "responders"
+  gem 'webmock'
 end
