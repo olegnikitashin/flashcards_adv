@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   filter :locale
 
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
     resources :users, only: :destroy
     put "find_flickr"        => "cards#find_flickr"
     post 'logout' => 'user_sessions#destroy', :as => :logout_user
-
+    resources :parse_cards, only: [:new, :create]
     resources :cards
 
     resources :blocks do
@@ -37,4 +39,7 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   delete 'sign_out', to: 'dashboard/user_sessions#destroy', as: 'logout'
+
+  mount Sidekiq::Web, at: '/sidekiq'
+  
 end
