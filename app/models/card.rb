@@ -6,6 +6,7 @@ class Card < ApplicationRecord
   validates :user_id, presence: true
   before_validation :set_review_date_as_now, on: :create
   validate :texts_are_not_equal
+  validates_uniqueness_of :original_text, scope: :user_id, case_sensitive: false
   validates :original_text, :translated_text, :review_date,
             presence: { message: 'Необходимо заполнить поле.' }
   validates :user_id, presence: { message: 'Ошибка ассоциации.' }

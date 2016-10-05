@@ -32,7 +32,7 @@ class Dashboard::BlocksController < Dashboard::BaseController
 
   def destroy
     @block.destroy
-    respond_with @block
+    redirect_to blocks_path
   end
 
   def set_as_current
