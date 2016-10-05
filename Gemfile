@@ -36,6 +36,9 @@ gem 'puma'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem "flickr-objects"
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem "slim-rails"
 
 group :development do
   gem 'web-console', '~> 2.0'

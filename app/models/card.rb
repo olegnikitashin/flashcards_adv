@@ -6,6 +6,7 @@ class Card < ApplicationRecord
   validates :user_id, presence: true
   before_validation :set_review_date_as_now, on: :create
   validate :texts_are_not_equal
+  validates_uniqueness_of :original_text, scope: :user_id, case_sensitive: false
   validates :original_text, :translated_text, :review_date,
             presence: { message: 'Необходимо заполнить поле.' }
   validates :user_id, presence: { message: 'Ошибка ассоциации.' }
@@ -43,13 +44,6 @@ class Card < ApplicationRecord
       end
     end
   end
-
-  # def flickr(tag)
-  #   photos = Flickr.photos.search(tags: tag, per_page: 10)
-  #   photos.collect do |photo|
-  #     URI.join "https://farm#{photo.farm}.staticflickr.com/", "#{photo.server}/", "#{photo.id}_#{photo.secret}.jpg/"
-  #   end
-  # end
 
   protected
 

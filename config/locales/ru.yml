@@ -41,6 +41,14 @@ ru:
     actions:
       dashboard:
         title: 'Администрация сайта'
+
+  add_cards_from_url: 'Добавить карточки с помощью URL'
+  url: 'URL'
+  original_text_selector: 'CSS селектор для оригинального текста'
+  translated_text_selector: 'CSS селектор для перевода'
+  block_prompt: '---Выберите колоду---'
+  block_label: 'Колода'
+
   activerecord:
     errors:
       messages:
@@ -49,3 +57,4 @@ ru:
         confirmation: 'Значения не совпадают.'
         taken: 'Не уникальное значение.'
         invalid: 'Не верный формат.'
+        record_invalid: 'Не верный формат.'
