@@ -41,6 +41,9 @@ gem 'sinatra', require: false
 gem "slim-rails"
 gem 'redis-rails'
 gem 'ahoy_matey'
+gem 'chartkick'
+gem 'groupdate'
+
 
 group :development do
   gem 'web-console', '~> 2.0'

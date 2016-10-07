@@ -13,5 +13,6 @@
 //= require jquery
 //= require ahoy
 //= require jquery_ujs
+//= require chartkick
 //= require turbolinks
 //= require_tree .
