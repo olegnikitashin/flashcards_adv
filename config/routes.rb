@@ -30,6 +30,8 @@ Rails.application.routes.draw do
     get 'profile/:id/edit' => 'profile#edit', as: :edit_profile
     put 'profile/:id' => 'profile#update', as: :profile
 
+    get 'statistics' => 'statistics#index', as: :statistics
+
     resources :cards
     resources :parse_cards, only: [:new, :create]
     resources :blocks do

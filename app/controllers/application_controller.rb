@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
+  after_filter :track_action
 
   # Overwrite the method sorcery calls when it
   # detects a non-authenticated request.
@@ -31,5 +32,9 @@ class ApplicationController < ActionController::Base
 
   def default_url_options(options = {})
     { locale: I18n.locale }.merge options
+  end
+
+  def track_action
+    ahoy.track "action_event", request.filtered_parameters
   end
 end

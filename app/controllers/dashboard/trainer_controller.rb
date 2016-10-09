@@ -32,10 +32,12 @@ class Dashboard::TrainerController < Dashboard::BaseController
                           original_text: @card.original_text,
                           translated_text: @card.translated_text
       end
+      ahoy.track "card:review_success", request.filtered_parameters
       redirect_to trainer_path
     else
       flash[:alert] = t(:incorrect_translation_alert)
       redirect_to trainer_path(id: @card.id)
+      ahoy.track "card:review_failed", request.filtered_parameters
     end
   end
 

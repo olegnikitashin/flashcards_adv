@@ -26,7 +26,8 @@ module Flashcards
 
     # Sidekiq as a background job processing library
     config.active_job.queue_adapter = :sidekiq
-    
+
+    config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 6.hours }
     # Deprication warning
     # config.active_record.raise_in_transactional_callbacks = true
   end

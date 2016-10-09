@@ -24,3 +24,5 @@ public/uploads/
 # Ignore application configuration
 /config/application.yml
 .byebug_history
+
+temp.md
