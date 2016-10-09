@@ -16,6 +16,7 @@ class Dashboard::CardsController < Dashboard::BaseController
     @card = current_user.cards.build(card_params)
     if @card.save
       redirect_to cards_path
+      ahoy.track "card:create", request.filtered_parameters
     else
       respond_with @card
     end
@@ -42,6 +43,7 @@ class Dashboard::CardsController < Dashboard::BaseController
       format.html
       format.js
     end
+    ahoy.track "card:flickr", request.filtered_parameters
   end
 
   private

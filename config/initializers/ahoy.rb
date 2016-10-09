@@ -1,3 +1,5 @@
 class Ahoy::Store < Ahoy::Stores::ActiveRecordTokenStore
-  # customize here
+  Ahoy.quiet = false
+  Ahoy.track_visits_immediately = true
+  Ahoy.geocode = :async
 end

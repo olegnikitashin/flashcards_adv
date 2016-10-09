@@ -3,6 +3,7 @@ require 'super_memo'
 class Card < ApplicationRecord
   belongs_to :user
   belongs_to :block
+  visitable
   validates :user_id, presence: true
   before_validation :set_review_date_as_now, on: :create
   validate :texts_are_not_equal

@@ -8,12 +8,14 @@ class Home::OauthsController < Home::BaseController
   def callback
     provider = auth_params[:provider]
     if @user = login_from(provider)
+      ahoy.track "user:login_social", request.filtered_parameters
       redirect_to trainer_path, notice: (t 'log_in_is_successful_provider_notice',
                                         provider: provider.titleize)
     else
       begin
         @user = create_from(provider)
         reset_session
+        ahoy.track "user:create_social", request.filtered_parameters
         auto_login(@user)
         redirect_to trainer_path, notice: (t 'log_in_is_successful_provider_notice',
                                           provider: provider.titleize)
